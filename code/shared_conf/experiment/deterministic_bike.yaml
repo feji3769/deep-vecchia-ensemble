@@ -1,0 +1,24 @@
+# @package _global_
+defaults:
+  - override /net: deterministic
+  - override /method: net
+  - override /dataset: bike
+  - override /metrics: rmse_only
+
+net:
+  prefix: "deterministic"
+  model:
+    input_dim: ${dataset.dim}
+method:
+  loss_fn:
+    _target_: methods.utils.mse_loss
+    _partial_: True
+
+# validation rmse by seed = 0.046,0.045,0.043
+hyps:
+  batch_size: 256
+  lr: 2e-2
+  weight_decay: 5e-5
+  num_epochs: 460 # num_epochs = (20000*256)/(N*.64) 
+  eta_min: 1e-4
+

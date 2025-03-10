@@ -1,0 +1,13 @@
+openssh-server
+git
+curl
+ffmpeg
+libsm6
+libxext6
+python3
+python3-pip
+python3-venv
+tmux
+cmake
+build-essential
+unzip

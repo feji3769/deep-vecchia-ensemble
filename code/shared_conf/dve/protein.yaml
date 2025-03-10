@@ -1,0 +1,16 @@
+m: 12
+noise_lb: 1e-8
+noise_ub: 1e-1
+approx_nn: True
+n_list: 100
+n_probe: 75
+
+calibrate_var: False
+scaled_nn: False
+
+rel_tol: 1e-2
+lr: 1e-3
+batch_size: 256
+n_window: 4
+n_val: 200
+

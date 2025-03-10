@@ -1,0 +1,4 @@
+name: kin40k
+seed: 1
+dim: 8
+folder: /workspace/data/${dataset.name}/splits/split_${dataset.seed}

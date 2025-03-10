@@ -1,0 +1,21 @@
+model:
+  _target_: nets.deterministic.Deterministic
+  input_dim: 17
+  output_dim: 1
+  hidden_dims:
+    - 512
+    - 128
+    - 64
+    - 32
+    - 16
+
+
+
+
+
+
+prefix: "deterministic"
+
+
+device: cuda
+

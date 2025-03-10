@@ -1,0 +1,40 @@
+# @package _global_
+defaults:
+  - /combining: base
+  - override /net: deterministic
+  - override /method: dve
+  - override /dataset: bike
+  - override /metrics: standard
+
+net:
+  prefix: "deterministic"
+  model:
+    input_dim: ${dataset.dim}
+
+
+hyps:
+  batch_size: 256
+
+dve:
+  build_args:
+    m: 16
+    rel_tol: 1e-3
+    lr: 5e-3
+    noise_lb: 1e-8
+    noise_ub: 1e-3
+    n_window: 2
+    n_val: 2000
+    scaled_nn: False
+    approx_nn: True
+    init_len_scale: 1.0
+    n_list: 100
+    n_probe: 75
+    batch_size: 256
+
+  layers:
+    - 'head.1.0'
+    - 'head.2.0'
+    - 'head.3.0'
+    - 'head.4.0'
+
+

@@ -1,0 +1,6 @@
+rmse: 
+  _target_: methods.utils.rmse
+  _partial_: True
+nll:
+  _target_: methods.utils.nll
+  _partial_: True

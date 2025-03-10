@@ -1,0 +1,13 @@
+prefix: "dve"
+fit_model: 
+  _target_: methods.dve.fit_model
+  _partial_: True
+save_model: 
+  _target_: methods.dve.save_model
+  _partial_: True
+load_model: 
+  _target_: methods.dve.load_model
+  _partial_: True
+predict: 
+  _target_: methods.dve.predict
+  _partial_: True

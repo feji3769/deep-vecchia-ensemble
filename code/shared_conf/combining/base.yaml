@@ -1,0 +1,4 @@
+weight_scheme: "var"
+combining_space: "y"
+softmax: False
+T: 1.0

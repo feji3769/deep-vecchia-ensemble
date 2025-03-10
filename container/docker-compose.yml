@@ -1,0 +1,37 @@
+version: "3.3"
+services:
+  ssh_server:
+    build: 
+      context: ./build
+      args:
+        UID: ${UID}
+        GID: ${GID}
+        DOCKER_USER: ${DOCKER_USER}
+        GIT_USERNAME: ${GIT_USERNAME}
+        GIT_EMAIL: ${GIT_EMAIL}
+    shm_size: '2gb' 
+    image: psc_${DOCKER_USER}
+    container_name: psc_${DOCKER_USER}_GPU_${MY_GPU}
+    # port 2222 on host, 22 in container.
+    ports:
+      - "${MY_PORT}:22"
+      - 9618:9618
+
+    volumes:
+      # data volume.
+      - /home/${DOCKER_USER}/datasets:/workspace/data:Z
+      # project volume.
+      - ${PROJECT_PATH}:/workspace/project:Z
+      # ssh volume.
+      - /home/${DOCKER_USER}/.ssh:/home/${DOCKER_USER}/.ssh:Z
+      # adding aws creds
+      - /home/${DOCKER_USER}/.aws:/home/${DOCKER_USER}/.aws:Z
+  
+
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ['${MY_GPU}']
+              capabilities: [gpu]

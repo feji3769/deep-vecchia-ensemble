@@ -1,0 +1,5 @@
+root: /workspace/project/out/uci
+
+prediction_path: ${storage.root}/predictions
+weight_path: ${storage.root}/weights
+method: ${storage.root}/methods

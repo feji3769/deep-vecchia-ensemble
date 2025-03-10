@@ -1,0 +1,4 @@
+name: bike
+seed: 1
+dim: 17
+folder: /workspace/data/${dataset.name}/splits/split_${dataset.seed}

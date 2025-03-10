@@ -1,0 +1,17 @@
+defaults:
+  - net: normal
+  - storage: uci
+  - dataset: bike
+  - method: ensemble
+  - metrics: standard
+  - _self_
+
+experiment_name: bike
+
+storage: 
+  root: /workspace/project/out/BIKE_UCI
+
+
+hydra:
+  searchpath:
+    - pkg://shared_conf

@@ -1,0 +1,19 @@
+prefix: "net"
+
+fit_model: 
+  _target_: methods.net.fit_model
+  _partial_: True
+save_model: 
+  _target_: methods.net.save_model
+  _partial_: True
+load_model: 
+  _target_: methods.net.load_model
+  _partial_: True
+predict: 
+  _target_: methods.net.predict
+  _partial_: True
+
+
+loss_fn:
+  _target_: methods.utils.mse_loss
+  _partial_: True

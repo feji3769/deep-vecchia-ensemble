@@ -1,0 +1,11 @@
+AWS_ACCESS_KEY_ID=my_id
+AWS_SECRET_ACCESS_KEY=my_key
+AWS_ENDPOINT_URL=my_endpoint
+DOCKER_USER=my_name
+PROJECT_PATH=/home/my_name/dve
+MY_PORT=2222
+MY_GPU=0
+UID=1000
+GID=1000
+GIT_EMAIL="my_email@gmail.com"
+GIT_USERNAME=my_git

@@ -1,0 +1,21 @@
+m: 8
+rel_tol: 5e-2
+lr: 5e-2
+noise_lb: 1e-8
+noise_ub: 1e-1
+approx_nn: True
+n_list: 100
+n_probe: 75
+batch_size: 256
+n_window: 3
+
+calibrate_var: False
+n_val: 200
+scaled_nn: False
+
+layers:
+  - 'head.2.0'
+  - 'head.3.0'
+  - 'head.4.0'
+  - 'head.5.0'
+
